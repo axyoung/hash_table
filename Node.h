@@ -1,4 +1,4 @@
-#include "Student.h"
+#include "student.h"
 
 class Node {
  public:
@@ -12,4 +12,4 @@ class Node {
  private:
   Student* student;
   Node* nextNode;
-}
+};
