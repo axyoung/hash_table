@@ -15,6 +15,7 @@ class Student {
 		char* getStudentLast();
 		float getStudentGPA();
 		~Student();
+		void setID(int);
 
 
 	private:

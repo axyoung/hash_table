@@ -11,8 +11,8 @@ Student::Student(char* first, char* last, int id, float gpa) {
 }
 
 Student::~Student() {
-	delete first;
-	delete last;
+	delete studentFirst;
+	delete studentLast;
 }
 
 // get the student's ID with this command
@@ -32,5 +32,8 @@ float Student::getStudentGPA() {
 	return studentGPA;
 }
 
+void Student::setID(int id) {
+	studentID = id;
+}
 
 
