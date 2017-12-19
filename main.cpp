@@ -17,10 +17,10 @@
 
 using namespace std;
 
-void add(Node* node, Student* student);
-void print(Node* node);
-void erase(Node* node, Student* student);
-void average(Node* node);
+void add(Node* node);
+//void print();
+//void erase();
+//void average();
 
 int main() {
 	
@@ -44,65 +44,65 @@ int main() {
 	cout << n1 -> getNext() -> getStudent() -> getStudentID() << endl;
 	cout << n1 -> getNext() -> getNext() -> getStudent() -> getStudentID() << endl;
 
-	
+	Node* head = NULL;
 	bool cont = true; // program runs until this is false
 
 	while (cont) {
 		cout << "Student List, you can (ADD, PRINT, DELETE, AVERAGE, or QUIT)" << endl;
-		char entry[10] = "";
+		char entry[10];
 		cin.get(entry, sizeof(entry));
 		cin.get();
+		// for some reason this keeps repeating
 
 		if (strcmp(entry, "ADD") == 0 || strcmp(entry, "add") == 0) {
-			add(Node* node, Student* student);
+			add(head);
 		}
 
 		if (strcmp(entry, "PRINT") == 0 || strcmp(entry, "print") == 0) {
-			print(Node* node);
+			//print();
 		}
 
 		if (strcmp(entry, "DELETE") == 0 || strcmp(entry, "delete") == 0) {
-			erase(Node* node, Student* student);
+			//erase();
 		}
 
 		if (strcmp(entry, "AVERAGE") == 0 || strcmp(entry, "average") == 0) {
-			average(Node* node);
+			//average();
 		}
 
 		if (strcmp(entry, "QUIT") == 0 || strcmp(entry, "quit") == 0) {
 			cont = false;
 		}
 
+	}
+
 	return 0;
 }
 
-void add(Node* node, Student* student) {
-	Node* current = new Node(student);
-	if (node == NULL) {
-		node -> setNext(current);
-		return;
-	}
+void add(Node* head) {
+	
+	int id;
+	float gpa;
+	char* first = new char[20];
+	char* last = new char[20];
 
-	if (node != NULL) {
-		cout << "Student ID: ";
-		current -> getNext() -> setID;
-		add(node->getNext(), student)
+	cout << "First name: ";
+	cin >> first;
+	
+	cout << "Last name: ";
+	cin >> last;
+	
+	cout << "Student ID: ";
+	cin >> id;
+	
+	cout << "Student GPA: ";
+	cin >> gpa;
+	
+	Student* student = new Student(first, last, id, gpa);
+	Node* node = new Node(student);
 
+	//add(node -> getNext(), student);
+
+	// now that I have a student and a node I need to use a recursive function to add it to my list
 }
-
-void print(Node* node) {
-
-
-}
-
-void erase(Node* node, Student* student) {
-
-
-}
-
-void average(Node* node) {
-
-
-}
-
 

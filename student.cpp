@@ -32,8 +32,5 @@ float Student::getStudentGPA() {
 	return studentGPA;
 }
 
-void Student::setID(int id) {
-	studentID = id;
-}
 
 
