@@ -50,8 +50,11 @@ int main() {
 	while (cont) {
 		cout << "Student List, you can (ADD, PRINT, DELETE, AVERAGE, or QUIT)" << endl;
 		char entry[10];
+		//cin.get();
+		//cin >> entry;
 		cin.get(entry, sizeof(entry));
-		cin.get();
+		//cin.get();
+		cout << entry << endl;
 		// for some reason this keeps repeating
 
 		if (strcmp(entry, "ADD") == 0 || strcmp(entry, "add") == 0) {
@@ -73,6 +76,8 @@ int main() {
 		if (strcmp(entry, "QUIT") == 0 || strcmp(entry, "quit") == 0) {
 			cont = false;
 		}
+
+		cin.get();
 
 	}
 
