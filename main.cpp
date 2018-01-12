@@ -55,14 +55,13 @@ int main() {
 		cin.get(entry, sizeof(entry));
 		//cin.get();
 		cout << entry << endl;
-		// for some reason this keeps repeating
 
 		if (strcmp(entry, "ADD") == 0 || strcmp(entry, "add") == 0) {
 			add(head);
 		}
 
 		if (strcmp(entry, "PRINT") == 0 || strcmp(entry, "print") == 0) {
-			//print();
+			print(head);
 		}
 
 		if (strcmp(entry, "DELETE") == 0 || strcmp(entry, "delete") == 0) {
@@ -104,10 +103,33 @@ void add(Node* head) {
 	cin >> gpa;
 	
 	Student* student = new Student(first, last, id, gpa);
-	Node* node = new Node(student);
+	Node* Node = new Node(student);
 
 	//add(node -> getNext(), student);
 
 	// now that I have a student and a node I need to use a recursive function to add it to my list
 }
+
+void addRecursive(Node* current) {
+	if (current == head) {
+		return;
+	}
+
+	if (current != NULL) {
+		current -> setNext(
+}
+
+void print(Node* nextNode) {
+	if (nextNode == head) {
+		cout << "List of students:" << endl;
+	}
+	if (nextNode != NULL) {
+		cout << "Student: " << nextNode -> getStudent -> getStudentFirst() << " " <<
+			               nextNode -> getStudent -> getStudentLast() << endl;
+		cout << "ID: " << nextNode -> getStudent -> getStudentID() << endl;
+		cout << "GPA: " << nextNode -> getStudent -> getStudentGPA() << endl;
+		print(nextNode -> getNext());
+	}
+}
+
 
