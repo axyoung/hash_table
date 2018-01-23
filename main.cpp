@@ -18,7 +18,8 @@
 using namespace std;
 
 void add(Node* node);
-//void print();
+//void addRecursive();
+void print(Node* nextNode);
 //void erase();
 //void average();
 
@@ -109,7 +110,7 @@ void add(Node* head) {
 
 	// now that I have a student and a node I need to use a recursive function to add it to my list
 }
-
+/*
 void addRecursive(Node* current) {
 	if (current == head) {
 		return;
@@ -117,19 +118,23 @@ void addRecursive(Node* current) {
 
 	if (current != NULL) {
 		current -> setNext(
+	superlintball
 }
-
+*/
 void print(Node* nextNode) {
-	if (nextNode == head) {
-		cout << "List of students:" << endl;
+	if (nextNode == NULL) {
+		return;
+		//cout << "List of students:" << endl;
 	}
-	if (nextNode != NULL) {
-		cout << "Student: " << nextNode -> getStudent -> getStudentFirst() << " " <<
-			               nextNode -> getStudent -> getStudentLast() << endl;
-		cout << "ID: " << nextNode -> getStudent -> getStudentID() << endl;
-		cout << "GPA: " << nextNode -> getStudent -> getStudentGPA() << endl;
+
+	cout << "Student: " << nextNode -> getStudent() -> getStudentFirst() << " " <<
+			       nextNode -> getStudent() -> getStudentLast() << endl;
+	cout << "ID: " << nextNode -> getStudent() -> getStudentID() << endl;
+	cout << "GPA: " << nextNode -> getStudent() -> getStudentGPA() << endl << endl;;
+	
+	if (nextNode -> getNext() != NULL) {
 		print(nextNode -> getNext());
 	}
 }
 
-
+void delete(Node*);
