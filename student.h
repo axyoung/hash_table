@@ -16,7 +16,6 @@ class Student {
 		float getStudentGPA();
 		~Student();
 
-
 	private:
 		int studentID;
 		float studentGPA;
